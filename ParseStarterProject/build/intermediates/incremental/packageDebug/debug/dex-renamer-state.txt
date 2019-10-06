@@ -1,0 +1,10 @@
+#Sun Oct 06 11:57:48 IST 2019
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=C\:\\Users\\Raghav Somani\\Desktop\\Twitter_Clone\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.1=C\:\\Users\\Raghav Somani\\Desktop\\Twitter_Clone\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.0=C\:\\Users\\Raghav Somani\\Desktop\\Twitter_Clone\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+file.2=C\:\\Users\\Raghav Somani\\Desktop\\Twitter_Clone\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\1\\classes2.dex
+file.1=C\:\\Users\\Raghav Somani\\Desktop\\Twitter_Clone\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\1\\classes.dex
+file.0=C\:\\Users\\Raghav Somani\\Desktop\\Twitter_Clone\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Raghav Somani\\Desktop\\Twitter_Clone\\ParseStarterProject\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Raghav Somani\\.gradle\\wrapper\\dists\\gradle-5.4.1\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-9.4.0.aar\\11ab5a144f1919c54b73e5cc88bbc0e6\\res\\values-v19\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "230",
+                        "endColumns": "76",
+                        "endOffsets": "302"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "76",
+                        "endOffsets": "127"
+                    }
+                }
+            ]
+        }
+    ]
+}
