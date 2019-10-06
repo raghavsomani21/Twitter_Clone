@@ -7,6 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 package com.parse.starter;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseAnonymousUtils;
 import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
@@ -40,22 +43,38 @@ public class MainActivity extends AppCompatActivity {
           Log.i("Login", "Success!");
           redirectUser();
         } else {
-          ParseUser newUser = new ParseUser();
-          newUser.setUsername(usernameEditText.getText().toString());
-          newUser.setPassword(passwordEditText.getText().toString());
-
-          newUser.signUpInBackground(new SignUpCallback() {
+          AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+          builder.setTitle("This account doesn't exist!! Do you want to create this account?");
+          builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
-            public void done(ParseException e) {
-              if (e == null) {
-                Log.i("Signup", "Success!");
-              } else {
-                Toast.makeText(MainActivity.this, e.getMessage().substring(e.getMessage().indexOf(" ")),Toast.LENGTH_SHORT).show();
+            public void onClick(DialogInterface dialogInterface, int i) {
+              ParseUser newUser = new ParseUser();
+              newUser.setUsername(usernameEditText.getText().toString());
+              newUser.setPassword(passwordEditText.getText().toString());
+              newUser.signUpInBackground(new SignUpCallback() {
+              @Override
+              public void done(ParseException e) {
+                if (e == null) {
+                  Log.i("Signup", "Success!");
+                } else {
+                  Toast.makeText(MainActivity.this, e.getMessage().substring(e.getMessage().indexOf(" ")),Toast.LENGTH_SHORT).show();
+                }
               }
+            });
             }
           });
-          redirectUser();
+
+          builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+              Toast.makeText(MainActivity.this,"Try logging in with an existing account!!",Toast.LENGTH_SHORT);
+              dialogInterface.cancel();
+            }
+          });
+          builder.show();
+
         }
+        redirectUser();
       }
     });
   }
