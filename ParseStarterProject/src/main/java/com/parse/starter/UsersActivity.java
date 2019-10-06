@@ -82,6 +82,8 @@ public class UsersActivity extends AppCompatActivity {
         }
         else if(item.getItemId()==R.id.logout){
             ParseUser.logOut();
+            Toast.makeText(UsersActivity.this,"Log Out successful",Toast.LENGTH_LONG).show();
+
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         }
